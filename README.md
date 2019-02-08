@@ -19,7 +19,7 @@ An easy to write-on boilerplate for making Discord.JS bots. Following the **[off
 ## How-To
 
 1. Clone the repository by doing in a terminal `git clone https://github.com/GlowingRain/TPPB.git`
-2. Run the console and do `npm install`
+2. After cloning, do `npm install`
 3. Create a file named `config.json` and copy-paste this inside it:
 
 ```json
