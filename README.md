@@ -15,6 +15,7 @@ An easy to-understand template for making Discord.JS bots. Built by following th
 * Command Handler.
 * Custom logger using chalk and moment.
 * Tools & errors modules, such as CMDError, noPerms, etc.
+* **Dinamically executed commands**
 
 ## How-To
 
