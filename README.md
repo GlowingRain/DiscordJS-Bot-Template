@@ -18,7 +18,7 @@ An easy to-understand template for making Discord.JS bots. Built by following th
 
 ## How-To
 
-1. Clone the repository by doing in a terminal `git clone https://github.com/GlowingRain/TPPB.git`
+1. Clone the repository by doing in a terminal `git clone https://github.com/GlowingRain/DiscordJS-Bot-Template.git`
 2. After cloning, do `npm install`
 3. Create a file named `config.json` and copy-paste this inside it:
 
