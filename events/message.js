@@ -57,11 +57,7 @@ module.exports = (client, message) => {
     // EXECUTE COMMAND
     try {
         command.execute(client, message, args);
-        if (message.author.id === ownerID) {
-            client.logger.cmd(`BOT OWNER ${message.author.tag} has used ${commandName}`);
-        } else {
-            client.logger.cmd(`${message.author.tag} has used ${commandName}`);
-        }
+        client.logger.cmd(`${message.author.tag} has used ${commandName}`);
     } catch (e) {
         console.error(e);
         client.errors.cmdError(message);
