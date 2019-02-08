@@ -1,51 +1,48 @@
 const Discord = require("discord.js");
 
+// Command ERROR
 module.exports.cmdError = (message) => {
     let cmdEmbed = new Discord.RichEmbed()
         .setColor("RED")
-        .setTitle("¡Ups!")
-        .setDescription("**Ha ocurrido un error al ejecutar el comando...**")
-        .setFooter("Si el problema persiste, por favor repórtalo.");
+        .setTitle("Oops!")
+        .setDescription("**There was a problem running that command.**");
 
     message.channel.send(cmdEmbed);
 }
 
+// Insufficient Permissions
 module.exports.noPerms = (message) => {
     let Denied = new Discord.RichEmbed()
         .setColor("RED")
-        .setTitle("¡Ups!")
-        .setDescription("**No tienes acceso a esto...**")
+        .setTitle("Oops!")
+        .setDescription("**You can't do this!**")
     message.channel.send(Denied).then(m => m.delete(2000));
 };
 
+// Only usable in SERVERS
 module.exports.guildOnlyCMD = (message) => {
     let GuildOnly = new Discord.RichEmbed()
         .setColor("RED")
-        .setTitle("¡Ups!")
-        .setDescription("**No puedes usar este comando en mis mensajes privados...**")
+        .setTitle("Oops!")
+        .setDescription("**You cannot use that here pal!**")
 
     message.channel.send(GuildOnly);
 };
 
+// Missing a log channel
 module.exports.MissingLogChannel = (message) => {
     let MissingEmbed = new Discord.RichEmbed()
         .setColor("RED")
-        .setTitle("¡Ups!")
-        .setDescription("**No he podido encontrar el canal de logs...**")
-        .setFooter("Si el problema persiste, por favor repórtalo.");
+        .setTitle("Oops!")
+        .setDescription("**I couldnt find the logs channel for the solicited request.**");
+
     message.channel.send(MissingEmbed);
 }
 
+// Tried to use a command towards themselves. 
 module.exports.SelfError = (message) => {
     let selfEmbed = new Discord.RichEmbed()
-        .setColor("#FF00FF")
-        .setDescription("**Estaría orgullosa de hacerte cosas, pero no creo que así funcionen las cosas...**");
-    return message.channel.send(selfEmbed);
-}
-
-module.exports.MissingUser = (message) => {
-    let selfEmbed = new Discord.RichEmbed()
-        .setColor("#FF00FF")
-        .setDescription("**Estaría orgullosa de hacerte cosas, pero no creo que así funcionen las cosas...**");
+        .setColor("RED")
+        .setDescription("**I don't think that is how things work...**");
     return message.channel.send(selfEmbed);
 }

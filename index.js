@@ -13,6 +13,7 @@ const fs = require("fs");
 // Client properties
 
 client.logger = require("./modules/Logger.js"); // Require Logger for logging things, obviously.
+client.errors = require("./modules/Errors.js"); // Errors...
 
 // Handlers
 

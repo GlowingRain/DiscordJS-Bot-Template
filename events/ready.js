@@ -5,6 +5,7 @@ const chalk = require("chalk"); // For practical logging... and some styling.
 
 module.exports = (client) => {
     try {
+        
         for (let key in prefix) {
             if (prefix.hasOwnProperty(key)) {
                 let value = prefix[key];
@@ -19,7 +20,7 @@ module.exports = (client) => {
             }
         }
 
-        client.logger.ready(`${client.user.tag} is up and running!`);
+        client.logger.ready(`${client.user.tag} is now up and running!`);
     } catch (e) {
         console.log(e)
     }
