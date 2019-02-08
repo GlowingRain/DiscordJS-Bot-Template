@@ -7,6 +7,7 @@ An easy to write-on boilerplate for making Discord.JS bots. Following the **[off
 - [git](https://git-scm.com/downloads)
 - [Node.js](https://nodejs.org/es/)
 - A "good" understanding of JavaScript
+- And of course, [Discord.JS](https://discord.js.org/)
 
 ## Features
 
