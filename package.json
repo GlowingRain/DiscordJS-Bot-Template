@@ -1,0 +1,25 @@
+{
+  "name": "tppb",
+  "version": "1.0.0",
+  "description": "The Perfect Private Bot, a template if you want to start out wanting to create your own bot for your own server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GlowingRain/TPPB.git"
+  },
+  "author": "Xem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GlowingRain/TPPB/issues"
+  },
+  "homepage": "https://github.com/GlowingRain/TPPB#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "discord.js": "^11.4.2",
+    "eslint": "^5.13.0",
+    "moment": "^2.24.0"
+  }
+}
