@@ -33,7 +33,7 @@ An easy to write-on boilerplate for making Discord.JS bots. Following the **[off
 
 You can locate your bot's token going to the [Discord Developer Portal](https://discordapp.com/developers/applications/me). Most like everything you will need for now.
 
-As you might already noticed by browsing files over the **`storage`** folder, you have a `channels.json` file. It holds every [channel.id](https://discord.js.org/#/docs/main/stable/class/GuildChannel?scrollTo=id) that the bot is going to need to perform actions such as **_welcoming new users_** and so on. You can add more channels as you wish.
+As you might already noticed by browsing files over the **`storage`** folder, you have a `channels.json` file. It holds every [Channel Id](https://discord.js.org/#/docs/main/stable/class/GuildChannel?scrollTo=id) that the bot is going to need to perform and/or complete actions such as **_welcoming new users_** and so on. You can add more channels as you wish.
 
 **That's it! You're good to go now, I'll be adding further code whenever I feel like doing it, stay updated if you want to.**
 
