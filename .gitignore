@@ -1,5 +1,6 @@
 # MAIN
 node_modules
+.vscode
 
 # IMPORTANT FILES
 config.json
