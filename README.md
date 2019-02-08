@@ -1,6 +1,6 @@
 # Discord.JS Bot Template
 
-An easy to write-on boilerplate for making Discord.JS bots. Following the **[official guide](https://discordjs.guide/)** of Discord.JS.
+An easy to-understand template for making Discord.JS bots. Built by following the **[official guide](https://discordjs.guide/)** of Discord.JS.
 
 ## Requirements
 
