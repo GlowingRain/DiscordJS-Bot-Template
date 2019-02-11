@@ -21,4 +21,4 @@ module.exports.randomValue = (array) => {
 
 module.exports.MapCategories = (client, category, number) => {
     return client.commands.filter(cmd => cmd.category === category[number]).map(cmd => cmd.name).join(", ");
-}
+};
