@@ -4,7 +4,7 @@ const category = require('../storage/categories.json');
 module.exports = {
     /* CMD INFORMATION */
     name: 'ping',
-    aliases: ["pong", "pango", "pingo", "pongo"],
+    aliases: ["ping"],
     description: "Shows the bot's ping.",
     category: category[1],
 
