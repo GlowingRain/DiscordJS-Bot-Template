@@ -19,7 +19,7 @@ module.exports = {
             embed.setDescription(`Here are all my commands!`)
             embed.addField(category[1], `${tools.MapCategories(client, category, 1)}`, true);
             embed.setFooter(`You can do ${prefix}help [command] to see aditional info!`);
-            return message.channel.send(embed)
+            return message.channel.send(embed) // Sends the embed with all the commands and their categories
         }
 
         const name = args[0].toLowerCase();
