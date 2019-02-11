@@ -11,7 +11,7 @@ module.exports = (client, message) => {
     if (message.author.bot) return; // Simple, if the author is a bot, return nothing.
     if (message.content.indexOf(prefix) !== 0) return; // If it doesn't start with the prefix, nothing.
     const args = message.content.slice(prefix.length).trim().split(/ +/g); // For cool people.
-    
+
     // Transforms the cmd's name to lower case. e.g. "USERINFO" transforms into "userinfo"
     // You literally can do uSeRiNFo without problems.
     const commandName = args.shift().toLowerCase();
@@ -25,7 +25,7 @@ module.exports = (client, message) => {
     if (command.guildOnly) { // Only usable in servers.
         if (message.channel.type === "dm") return guildOnlyCMD(message);
     }
-    
+
     if (command.permLevel === 4) { // More like a Mod-Role.
         if (!message.member.hasPermission("MANAGE_MESSAGES")) {
             return;
@@ -44,7 +44,7 @@ module.exports = (client, message) => {
 
     // Using [permLevel: 10] to protect very dangerous commands like eval, is very important. You don't want anyone
     // to snitch into your pc and have full access through a bot.
- 
+
     if (command.args && !args.length) {
         embed.setTitle(`Didn't find arguments for that command!`);
         if (command.usage) {

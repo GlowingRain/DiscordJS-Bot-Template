@@ -4,13 +4,13 @@ const tools = require("../modules/Tools.js");
 const { prefix } = require('../config.json');
 
 module.exports = {
-    /* CMD INFORMATION */
+    // CMD INFORMATION
     name: 'help',
     aliases: ["cmds", "halp", "cmds"],
     description: "Show's the commands of the bot",
     category: category[1],
 
-    /* CODE */
+    // THE ACTUAL CODE
     execute(client, message, args) {
         const embed = new Discord.RichEmbed()
             .setColor("BLUE");

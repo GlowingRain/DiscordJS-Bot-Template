@@ -12,51 +12,51 @@ exports.log = (content, type = "log") => {
     case "log": {
       return console.log(`${timestamp} ${chalk.blue(type.toUpperCase())} ${content} `);
     }
-    case "warn": {
+    case 'warn': {
       return console.log(`${timestamp} ${chalk.yellow(type.toUpperCase())} ${content} `);
     }
-    case "error": {
+    case 'error': {
       return console.log(`${timestamp} ${chalk.red(type.toUpperCase())} ${content} `);
     }
-    case "debug": {
+    case 'debug': {
       return console.log(`${timestamp} ${chalk.green(type.toUpperCase())} ${content} `);
     }
-    case "cmd": {
+    case 'cmd': {
       return console.log(`${timestamp} ${chalk.gray(type.toUpperCase())} ${content}`);
     }
-    case "ready": {
+    case 'ready': {
       return console.log(`${timestamp} ${chalk.green(type.toUpperCase())} ${content}`);
     }
-    case "load": {
+    case 'load': {
       return console.log(`${timestamp} ${chalk.magenta(type.toUpperCase())} ${content} `);
     }
-    case "client": {
+    case 'client': {
       return console.log(`${timestamp} ${chalk.cyan(type.toUpperCase())} ${content} `);
     }
-    case "setup": {
+    case 'setup': {
       return console.log(`${timestamp} ${chalk.hex("#FFA500")(type.toUpperCase())} ${content} `);
     }
-    case "event": {
+    case 'event': {
       return console.log(`${timestamp} ${chalk.hex("#82FFC4")(type.toUpperCase())} ${content} `);
     }
-    default: throw new TypeError("Logger type must be either warn, debug, log, ready, client, setup, event, cmd or error.");
+    default: throw new TypeError('Logger type must be either warn, debug, log, ready, client, setup, event, cmd or error.');
   }
-}; 
+};
 
-exports.error = (...args) => this.log(...args, "error");
+exports.error = (...args) => this.log(...args, 'error');
 
-exports.warn = (...args) => this.log(...args, "warn");
+exports.warn = (...args) => this.log(...args, 'warn');
 
-exports.debug = (...args) => this.log(...args, "debug");
+exports.debug = (...args) => this.log(...args, 'debug');
 
-exports.cmd = (...args) => this.log(...args, "cmd");
+exports.cmd = (...args) => this.log(...args, 'cmd');
 
-exports.ready = (...args) => this.log(...args, "ready");
+exports.ready = (...args) => this.log(...args, 'ready');
 
-exports.load = (...args) => this.log(...args, "load");
+exports.load = (...args) => this.log(...args, 'load');
 
-exports.client = (...args) => this.log(...args, "client");
+exports.client = (...args) => this.log(...args, 'client');
 
-exports.setup = (...args) => this.log(...args, "setup");
+exports.setup = (...args) => this.log(...args, 'setup');
 
-exports.event = (...args) => this.log(...args, "event");
+exports.event = (...args) => this.log(...args, 'event');
