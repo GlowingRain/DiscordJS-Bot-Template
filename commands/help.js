@@ -16,10 +16,10 @@ module.exports = {
             .setColor("BLUE");
 
         if (!args.length) {
-            embed.setDescription(`Here are all my commands!`)
+            embed.setDescription(`Here are all my commands!`);
             embed.addField(category[1], `${tools.MapCategories(client, category, 1)}`, true);
             embed.setFooter(`You can do ${prefix}help [command] to see aditional info!`);
-            return message.channel.send(embed) // Sends the embed with all the commands and their categories
+            return message.channel.send(embed); // Sends the embed with all the commands and their categories
         }
 
         const name = args[0].toLowerCase();
@@ -29,12 +29,13 @@ module.exports = {
             return message.channel.send("That's not a valid command!");
         }
 
-        embed.setTitle(`Info about ${name}`)
+        embed.setTitle(`Info about ${name}`);
 
         if (command.description) {
-            embed.setDescription(command.description)
-        } else {
-            embed.setDescription("No description available.")
+            embed.setDescription(command.description);
+        }
+ else {
+            embed.setDescription("No description available.");
         }
 
         if (command.aliases) {
@@ -45,7 +46,7 @@ module.exports = {
             embed.addField("Usage", command.usage);
         }
 
-        embed.setFooter("<> means required, [] means optional.")
+        embed.setFooter("<> means required, [] means optional.");
         return message.channel.send(embed);
     },
 };

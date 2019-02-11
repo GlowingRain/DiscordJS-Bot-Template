@@ -48,7 +48,7 @@ module.exports = (client, message) => {
     if (command.args && !args.length) {
         embed.setTitle(`Didn't find arguments for that command!`);
         if (command.usage) {
-            embed.setDescription(`The right usage would be: \`${prefix}${command.name} ${command.usage}\``)
+            embed.setDescription(`The right usage would be: \`${prefix}${command.name} ${command.usage}\``);
             embed.setFooter("<> means obligatory, [] means optional");
         }
         return message.channel.send({ embed });
@@ -58,7 +58,8 @@ module.exports = (client, message) => {
     try {
         command.execute(client, message, args);
         client.logger.cmd(`${message.author.tag} has used ${commandName}`);
-    } catch (e) {
+    }
+ catch (e) {
         console.error(e);
         client.errors.cmdError(message);
     }
