@@ -46,7 +46,7 @@ If you're going to publish your work on Github or somewhere else, please, **NEVE
 
 * [x] Event Handler.
 * [x] Command Handler.
-* [ ] Basic permission level.
+* [x] Basic permission level.
 * [ ] Help command with categories.
 
 ## License
