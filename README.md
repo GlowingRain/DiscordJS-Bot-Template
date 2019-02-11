@@ -15,7 +15,7 @@ An easy to-understand template for making Discord.JS bots. Built by following th
 
 * Event Handler
 * Command Handler
-* Custom logger using [chalk](https://www.npmjs.com/package/chalk) and [moment](https://www.npmjs.com/package/moment)
+* Custom logger using [chalk](https://www.npmjs.com/package/chalk) and [moment](https://www.npmjs.com/package/moment) (Originally from [AnIdiotsGuide's guidebot](https://github.com/AnIdiotsGuide/guidebot), which is pretty awesome!)
 * Tools & errors modules, such as CMDError, noPerms, etc.
 * **Dinamically executed commands**
 
