@@ -1,10 +1,12 @@
 const Discord = require('discord.js');
+const category = require('../storage/categories.json');
 
 module.exports = {
     /* CMD INFORMATION */
     name: 'ping',
-    aliases: ["pong"],
+    aliases: ["pong", "pango", "pingo", "pongo"],
     description: "Shows the bot's ping.",
+    category: category[1],
 
     /* CODE */
     execute(client, message, args) {

@@ -18,3 +18,7 @@ module.exports.getUserFromMentionRegex = (client, mention) => {
 module.exports.randomValue = (array) => {
     return array[Math.random() * array.length | 0];
 };
+
+module.exports.MapCategories = (client, category, number) => {
+    return client.commands.filter(cmd => cmd.category === category[number]).map(cmd => cmd.name).join(", ");
+}
