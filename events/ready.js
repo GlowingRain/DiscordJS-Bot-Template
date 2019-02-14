@@ -2,7 +2,7 @@ const { prefix } = require("../config.json");
 const channels = require("../storage/channels.json");
 
 // For practical logging... and some styling.
-const chalk = require("chalk"); 
+const chalk = require("chalk");
 
 module.exports = (client) => {
     try {
