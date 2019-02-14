@@ -9,7 +9,6 @@ const client = new Discord.Client();
 const { token } = require("./config.json");
 
 const fs = require("fs");
-const glob = require("glob");
 
 client.logger = require("./modules/Logger.js");
 client.errors = require("./modules/Errors.js");
