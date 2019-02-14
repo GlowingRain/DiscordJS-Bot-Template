@@ -1,7 +1,7 @@
 {
-  "name": "tppb",
+  "name": "discordjs-bot-template",
   "version": "1.0.0",
-  "description": "The Perfect Private Bot, a template if you want to start out wanting to create your own bot for your own server.",
+  "description": "A template if you want to start out wanting to create your own bot for your own server.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/GlowingRain/DiscordJS-Bot-Template.git"
   },
-  "author": "Xem",
+  "author": "GlowingRain",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/GlowingRain/DiscordJS-Bot-Template/issues"
