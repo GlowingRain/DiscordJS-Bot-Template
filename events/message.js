@@ -17,8 +17,9 @@ module.exports = (client, message) => {
     const commandName = args.shift().toLowerCase();
 
     // GET COMMAND
-    const command = client.commands.get(commandName)
-        || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName)); // Gets CMD names + aliases
+    // Gets CMD names + aliases
+    const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName)); 
+
     if (!command) return;
 
     // FEATURES
@@ -46,7 +47,7 @@ module.exports = (client, message) => {
     if (command.permLevel === 6) {
         if (message.author.id !== message.guild.ownerID) return;
     }
-    
+
     // You.
     if (command.permLevel === 10) {
         if (message.author.id !== ownerID) return;

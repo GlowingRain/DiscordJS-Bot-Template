@@ -1,7 +1,8 @@
 const { prefix } = require("../config.json");
 const channels = require("../storage/channels.json");
 
-const chalk = require("chalk"); // For practical logging... and some styling.
+// For practical logging... and some styling.
+const chalk = require("chalk"); 
 
 module.exports = (client) => {
     try {
@@ -20,8 +21,7 @@ module.exports = (client) => {
         }
 
         client.logger.ready(`${client.user.tag} is now up and running!`);
-    }
-    catch (e) {
+    } catch (e) {
         console.log(e);
     }
 };
