@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const { prefix, ownerID } = require("../config.json");
-const { guildOnlyCMD } = require("../modules/Errors");
+const { guildOnly, dmOnly } = require("../modules/Errors");
 
 module.exports = (client, message) => {
     // EMBED
@@ -8,9 +8,9 @@ module.exports = (client, message) => {
         .setColor("BLUE");
 
     // CHECKS
-    if (message.author.bot) return; // Simple, if the author is a bot, return nothing.
-    if (message.content.indexOf(prefix) !== 0) return; // If it doesn't start with the prefix, nothing.
-    const args = message.content.slice(prefix.length).trim().split(/ +/g); // For cool people.
+    if (message.author.bot) return;
+    if (message.content.indexOf(prefix) !== 0) return;
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
 
     // Transforms the cmd's name to lower case. e.g. "USERINFO" transforms into "userinfo"
     // You literally can do uSeRiNFo without problems.
@@ -22,23 +22,33 @@ module.exports = (client, message) => {
     if (!command) return;
 
     // FEATURES
-    if (command.guildOnly) { // Only usable in servers.
-        if (message.channel.type === "dm") return guildOnlyCMD(message);
+
+    // Only usable in servers.
+    if (command.guildOnly) {
+        if (message.channel.type === "dm") return guildOnly();
     }
 
-    if (command.permLevel === 4) { // More like a Mod-Role.
-        if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-            return;
-        }
+    if (command.dmOnly) {
+        if (message.channel.type === "text") return dmOnly();
     }
 
-    if (command.permLevel === 5) { // More like a role with Admin perms.
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
-            return;
-        }
+    // More like a Mod-Role.
+    if (command.permLevel === 4) {
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) return;
     }
 
-    if (command.permLevel === 10) { // You.
+    // More like a role with Admin perms.
+    if (command.permLevel === 5) {
+        if (!message.member.hasPermission("ADMINISTRATOR")) return;
+    }
+
+    // Guild Owner.
+    if (command.permLevel === 6) {
+        if (message.author.id !== message.guild.ownerID) return;
+    }
+    
+    // You.
+    if (command.permLevel === 10) {
         if (message.author.id !== ownerID) return;
     }
 
@@ -59,7 +69,7 @@ module.exports = (client, message) => {
         command.execute(client, message, args);
         client.logger.cmd(`${message.author.tag} has used ${commandName}`);
     }
- catch (e) {
+    catch (e) {
         console.error(e);
         client.errors.cmdError(message);
     }

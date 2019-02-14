@@ -20,8 +20,18 @@ module.exports.noPerms = (message) => {
 };
 
 // Only usable in SERVERS
-module.exports.guildOnlyCMD = (message) => {
+module.exports.guildOnly = (message) => {
     const GuildOnly = new Discord.RichEmbed()
+        .setColor("RED")
+        .setTitle("Oops!")
+        .setDescription("**You cannot use that here pal!**");
+
+    message.channel.send(GuildOnly);
+};
+
+// Only usable in DIRECT MESSAGES (DM)
+module.exports.dmOnly = (message) => {
+    const dmOnly = new Discord.RichEmbed()
         .setColor("RED")
         .setTitle("Oops!")
         .setDescription("**You cannot use that here pal!**");

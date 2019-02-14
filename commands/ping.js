@@ -1,14 +1,12 @@
-const category = require('../storage/categories.json');
-
 module.exports = {
     // CMD INFORMATION
     name: 'ping',
-    aliases: ["ping"],
+    aliases: ["pong"],
     description: "Shows the bot's ping.",
-    category: category[1],
+    category: "Information",
 
     // THE ACTUAL CODE
-    execute(client, message, args) {
+    execute(client, message) {
         const msgping1 = new Date();
         const botping = new Date() - message.createdAt;
         const msgping2 = new Date() - msgping1;

@@ -21,7 +21,7 @@ module.exports = (client) => {
 
         client.logger.ready(`${client.user.tag} is now up and running!`);
     }
- catch (e) {
+    catch (e) {
         console.log(e);
     }
 };
