@@ -36,7 +36,7 @@ module.exports.dmOnly = (message) => {
         .setTitle("Oops!")
         .setDescription("**You cannot use that here pal!**");
 
-    message.channel.send(GuildOnly);
+    message.channel.send(dmOnly);
 };
 
 // Missing a log channel
