@@ -1,4 +1,8 @@
-# Discord.JS Bot Template
+# Discord.JS Bot Template (OLD)
+
+
+> _**Use this template if you're up to edit this to make it work with the most recent updates made to the Discord.JS library, currently `v12 (stable)`, all of this code was written in `v11`, and it's not longer supported, whatd'ya expect from a 2 year old project!?**_
+
 
 An easy to-understand template for making Discord.JS bots. Built by following the **[official guide](https://discordjs.guide/)** of Discord.JS.
 
